@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5090964}
   - 60: {fileID: 6042814}
   m_Layer: 0
-  m_Name: intestine_liver
+  m_Name: ingredient_liver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

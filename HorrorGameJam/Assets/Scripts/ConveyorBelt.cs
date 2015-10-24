@@ -19,7 +19,8 @@ public class ConveyorBelt : MonoBehaviour {
 
         if (rb)
         {
-            rb.velocity = new Vector2(1.0f, 0.0f);
+            if (rb.velocity.x < 1.0f)
+                rb.AddForceAtPosition(new Vector2(5.0f, 0.0f), coll.contacts[0].point);
         }
     }
 }
