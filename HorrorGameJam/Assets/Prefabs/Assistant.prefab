@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 466632}
+  - 111: {fileID: 11165882}
   m_Layer: 0
   m_Name: RightArmNode
   m_TagString: Untagged
@@ -239,6 +240,21 @@ Animation:
   m_Animation: {fileID: 7400000, guid: e8aa704034a34a140a30787b833fd567, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: e8aa704034a34a140a30787b833fd567, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &11165882
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100050}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 8337f3b07c1dca847bd683bee55509bb, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
