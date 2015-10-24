@@ -21,7 +21,6 @@ public class IngredientSpawner : MonoBehaviour
             {
                 int index = Random.Range(0, ingredients.GetLength(0));
                 GameObject go = Instantiate(ingredients[index], transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))) as GameObject;
-                go.GetComponent<Rigidbody2D>().velocity = new Vector2(-8.0f, 8.0f);
             }
 
             spawnTime = Time.time + 2.0f;
