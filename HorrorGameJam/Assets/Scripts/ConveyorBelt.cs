@@ -1,17 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ConveyorBelt : MonoBehaviour {
+public class ConveyorBelt : MonoBehaviour
+{
+    public bool reversed = false;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    // Use this for initialization
+    void Start()
+    {
+        GetComponent<Animator>().SetBool("Reverse", reversed);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     void OnCollisionStay2D(Collision2D coll)
     {
@@ -19,10 +23,21 @@ public class ConveyorBelt : MonoBehaviour {
 
         if (rb)
         {
-            if (rb.velocity.x < 1.0f)
+            if (!reversed)
             {
-                rb.AddForceAtPosition(new Vector2(10.0f, 0.0f), coll.contacts[0].point);
-                Debug.DrawLine(coll.contacts[0].point, coll.contacts[0].point + new Vector2(5.0f, 0.0f));
+                if (rb.velocity.x < 1.0f)
+                {
+                    rb.AddForceAtPosition(new Vector2(10.0f, 0.0f), coll.contacts[0].point);
+                    Debug.DrawLine(coll.contacts[0].point, coll.contacts[0].point + new Vector2(5.0f, 0.0f));
+                }
+            }
+            else
+            {
+                if (rb.velocity.x > -1.0f)
+                {
+                    rb.AddForceAtPosition(new Vector2(-10.0f, 0.0f), coll.contacts[0].point);
+                    Debug.DrawLine(coll.contacts[0].point, coll.contacts[0].point + new Vector2(-5.0f, 0.0f));
+                }
             }
         }
     }
