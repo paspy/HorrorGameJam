@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AssistantThrow : MonoBehaviour
 {
     Animation anim;
-    Rigidbody2D objectRb;
+    List<Rigidbody2D> objectRbList = new List<Rigidbody2D>();
 
     // Use this for initialization
     void Start()
@@ -20,19 +21,25 @@ public class AssistantThrow : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        objectRb = other.GetComponent<Rigidbody2D>();
-        objectRb.isKinematic = true;
+        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
+        objectRbList.Add(rb);
         other.transform.parent = transform;
         anim.Play();
     }
 
     void Throw()
     {
-        if (objectRb)
+        foreach(Rigidbody2D rb in objectRbList)
         {
-            objectRb.isKinematic = false;
-            objectRb.transform.parent = null;
-            objectRb.velocity = new Vector2(-10.0f, 8.0f);
+            if (rb == null)
+                continue;
+
+            rb.isKinematic = false;
+            rb.transform.parent = null;
+            rb.velocity = new Vector2(-10.0f, 8.0f);
         }
+
+        objectRbList.Clear();
     }
 }
