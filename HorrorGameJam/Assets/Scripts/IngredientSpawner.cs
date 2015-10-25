@@ -4,6 +4,7 @@ using System.Collections;
 public class IngredientSpawner : MonoBehaviour
 {
     public GameObject[] ingredients;
+    public GameObject smokeEffect;
     float spawnTime;
 
     // Use this for initialization
