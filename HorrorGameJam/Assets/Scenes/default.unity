@@ -263,6 +263,7 @@ MonoBehaviour:
   ingredients:
   - {fileID: 103916, guid: d5b67d2b58351ee46b079a83f6b261ce, type: 2}
   smokeEffect: {fileID: 147200, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
+  spawnEffect: {fileID: 147200, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
 --- !u!4 &377990635
 Transform:
   m_ObjectHideFlags: 0
@@ -274,7 +275,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1 &483111101 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 184686, guid: 709d867dace7ea943b953210c041689f, type: 2}
@@ -301,7 +302,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 483111101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -421,68 +422,6 @@ BoxCollider2D:
   m_Offset: {x: -1.73599243, y: -.322078407}
   serializedVersion: 2
   m_Size: {x: .192996353, y: 3.19182968}
---- !u!1001 &667431615
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 474258, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 8.06999969
-      objectReference: {fileID: 0}
-    - target: {fileID: 474258, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.32999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 474258, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474258, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -.707106829
-      objectReference: {fileID: 0}
-    - target: {fileID: 474258, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474258, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474258, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .707106829
-      objectReference: {fileID: 0}
-    - target: {fileID: 474258, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_RootOrder
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 19941580, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: m_MaxParticleSize
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 19872400, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: ShapeModule.radius
-      value: .0500000007
-      objectReference: {fileID: 0}
-    - target: {fileID: 19872400, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 19872400, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: InitialModule.startSize.minCurve.m_Curve.Array.data[0].value
-      value: .333333343
-      objectReference: {fileID: 0}
-    - target: {fileID: 19872400, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b0ff9c25a937253488db29450eafbc5c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &689324539
 Prefab:
   m_ObjectHideFlags: 0
@@ -995,6 +934,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e752c2d55c0d2294ca3a133c19b8433d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1405607824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1405607826}
+  - 61: {fileID: 1405607825}
+  m_Layer: 0
+  m_Name: bottle_trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1405607825
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405607824}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.85000002, y: 6.5}
+--- !u!4 &1405607826
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405607824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.07999992, y: 2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
 --- !u!1001 &1439539894
 Prefab:
   m_ObjectHideFlags: 0
