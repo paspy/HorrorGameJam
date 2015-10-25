@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: 5b63e4ed28256a044b24a31cd973d4e3
-timeCreated: 1445648102
+guid: 4727ec407f6831b4d84c85c03c9744e0
+timeCreated: 1445729442
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: ConveyerBelt_0
-    21300002: ConveyerBelt_1
-    21300004: ConveyerBelt_2
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,11 +26,11 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -41,7 +38,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,37 +49,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: ConveyerBelt_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 72
-        width: 276
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ConveyerBelt_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 36
-        width: 276
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ConveyerBelt_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 276
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
